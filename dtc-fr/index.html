@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page d'atterrissage NERVE CALM</title>
+  <!-- Importation de la police Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Styles globaux */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #fff;
+    }
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    /* Ajustement pour que les grandes images ne dépassent pas la largeur */
+    #sessao3 img, #sessao9 img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* SECTION 1 */
+    #sessao1 {
+      background-color: #3366FF;
+      padding: 40px 20px;
+    }
+    #sessao1 .headline {
+      font-weight: bold;
+      color: #fff;
+      font-size: 24px;
+    }
+    #sessao1 .subheadline {
+      color: #000;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* SECTION 2 */
+    #sessao2 {
+      background-color: #000;
+      padding: 40px 20px;
+    }
+    #bottles {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    #rating {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .flex-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .flex-row img {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Séquence d'images responsive */
+    .image-sequence {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .image-sequence img {
+      flex: 1 1 calc(33.33% - 10px);
+      max-width: calc(33.33% - 10px);
+    }
+    @media (max-width: 768px) {
+      .image-sequence img {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+    /* Animation de pulsation */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .pulse {
+      animation: pulse 1s infinite;
+    }
+
+    /* SECTION 3 */
+    #sessao3 {
+      background-color: #222;
+      padding: 40px 20px;
+    }
+    #sessao3 h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    #sessao3 p {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    .order-button {
+      background-color: green;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* SECTION 4 */
+    #sessao4 {
+      background-color: #f2f2f2;
+      padding: 40px 20px;
+      color: #000;
+      text-align: left;
+    }
+    #sessao4 .faq-title {
+      color: #3366FF;
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .faq-item {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      padding: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+    .faq-item .question {
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item .question .q-text {
+      font-size: 16px;
+    }
+    .faq-item .toggle-icon {
+      font-size: 20px;
+      margin-left: 10px;
+    }
+    .faq-item .answer {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    /* Bouton et texte de garantie dans la Section 4 */
+    #sessao4 .order-button {
+      display: block;
+      margin: 20px auto;
+    }
+    #sessao4 .guarantee-text {
+      text-align: center;
+      color: #000;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    /* SECTION 5 */
+    #sessao5 {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+    #sessao5 .free-shipping {
+      color: #000;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    #sessao5 .recommended {
+      color: green;
+      font-size: 16px;
+    }
+
+    /* SECTION 6 */
+    #sessao6 {
+      background-color: #333;
+      padding: 40px 20px;
+    }
+    #sessao6 .main-text {
+      color: #fff;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    #sessao6 .sub-text {
+      color: #3366FF;
+      font-size: 20px;
+    }
+
+    /* SECTION 7 */
+    #sessao7 {
+      background-color: #444;
+      padding: 40px 20px;
+      color: #fff;
+    }
+    #sessao7 .bonus-title {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .bonus-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .bonus-item {
+      background-color: #555;
+      padding: 20px;
+      max-width: 400px;
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .bonus-item img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .bonus-item .bonus-head {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .bonus-item .bonus-price {
+      color: #000;
+      margin-bottom: 10px;
+    }
+    .bonus-item .bonus-desc {
+      font-size: 16px;
+      text-align: left;
+    }
+    .strike {
+      text-decoration: line-through;
+    }
+
+    /* SECTION 8 */
+    #sessao8 {
+      background-color: #000;
+      padding: 40px 20px;
+    }
+
+    /* SECTION 9 */
+    #sessao9 {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* SECTION 10 */
+    #sessao10 {
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    #sessao10 .terms-menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    #sessao10 .terms-menu a {
+      color: #000;
+      margin: 0 5px;
+    }
+
+    /* SECTION 11 */
+    #sessao11 {
+      background-color: #e2e2e2;
+      padding: 20px;
+      font-size: 12px;
+      color: #000;
+      text-align: center;
+    }
+
+    /* SECTION 12 */
+    #sessao12 {
+      background-color: #ccc;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <!-- SECTION 1 -->
+  <section id="sessao1">
+    <div class="headline">OBTENEZ VOTRE PACK DE RÉDUCTION NERVE CALM CI-DESSOUS</div>
+    <div class="subheadline">DISPONIBLE UNIQUEMENT TANT QUE LES STOCKS DURANT !</div>
+  </section>
+
+  <!-- SECTION 2 -->
+  <section id="sessao2">
+    <div id="bottles">18 bouteilles en stock</div>
+    <div id="rating">
+      Note moyenne des clients 4.93<br />
+      <img src="images/star.svg" alt="Étoile" />
+    </div>
+    <div class="flex-row image-sequence">
+      <img src="images/1.png" alt="Image 1" />
+      <img src="images/3.png" alt="Image 3" />
+      <img src="images/6.png" alt="Image 6" />
+    </div>
+    <div class="flex-row">
+      <img src="images/selos.png" alt="Sceaux" />
+    </div>
+  </section>
+
+  <!-- SECTION 3 -->
+  <section id="sessao3">
+    <img src="images/garantia.png" alt="Garantie" />
+    <h2>GARANTIE DE SATISFACTION À 100%</h2>
+    <p>
+      NERVE CALM est accompagné d'une garantie de remboursement à 100% pendant 60 jours à compter de la date de votre achat initial.
+    </p>
+    <button class="order-button">COMMANDER MAINTENANT</button>
+  </section>
+
+  <!-- SECTION 4 -->
+  <section id="sessao4">
+    <div class="faq-title">Questions fréquemment posées</div>
+
+    <!-- FAQ Item 1 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Qu'est-ce que NERVE CALM ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        NERVE CALM est un complément spécialement formulé pour soulager l'inconfort du nerf sciatique. Il repose sur des recherches approfondies et contient une combinaison d'ingrédients scientifiquement prouvés qui ciblent la « trinité de l'inconfort nerveux », apportant un soulagement, favorisant la santé des nerfs et combattant l'inflammation. La formule inclut l'ingrédient principal, le palmitoylethanolamide (PEA), reconnu pour soutenir une réponse inflammatoire saine et réduire les inconforts mineurs.
+      </div>
+    </div>
+
+    <!-- FAQ Item 2 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Quand ma commande arrivera-t-elle ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        À partir de ce mois, le stock est disponible et lorsque vous commandez maintenant, vous recevrez instantanément un e-mail de confirmation de commande. Soyez assuré(e) que nous travaillons d'arrache-pied pour expédier votre commande le plus rapidement possible !<br /><br />
+        Nous expédierons votre commande directement à votre domicile ou bureau via un transporteur premium, et vous la recevrez dans un délai de 7 à 14 jours ouvrables à compter de votre commande. Les produits sont expédiés depuis la Floride, aux États-Unis, et nous vous enverrons un e-mail de notification d'expédition avec un numéro de suivi dès que votre commande sera expédiée, afin que vous puissiez la suivre jusqu'à votre porte.
+      </div>
+    </div>
+
+    <!-- FAQ Item 3 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Quelle est la politique de remboursement ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Votre commande est accompagnée d'une garantie de remboursement.<br /><br />
+        Garantie sans risque de 60 jours<br /><br />
+        Il s'agit d'une garantie de remboursement à 100% pendant 60 jours qui élimine tout risque et vous permet d'essayer NERVE CALM dès maintenant.
+      </div>
+    </div>
+
+    <!-- FAQ Item 4 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Est-il sûr d'acheter en ligne ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Acheter en ligne est absolument l'une des méthodes d'achat les plus sûres ! Les certificats SSL authentifient notre identité et chiffrent les informations que les visiteurs saisissent sur notre site. Cela empêche les voleurs d'intercepter les échanges entre notre page Web et un autre ordinateur. Lorsqu'un certificat SSL est installé, vous pouvez être assuré(e) que les informations que vous envoyez sont sécurisées et ne peuvent pas être consultées par des cybercriminels.<br /><br />
+        Notre certificat SSL permet au navigateur et au serveur Web d'établir une connexion sécurisée et chiffrée. Le processus de « poignée de main » SSL, qui établit la session sécurisée, se déroule discrètement en arrière-plan sans interrompre votre expérience d'achat. Une icône de cadenas dans la barre d'état du navigateur et le préfixe « https:// » dans l'URL sont les seules indications visibles d'une session sécurisée en cours.<br /><br />
+        La page de paiement NERVE CALM est sécurisée par un certificat SSL de serveur Web Symantec Class 3 EV. Les transactions sur le site sont protégées par un chiffrement SSL jusqu'à 256 bits. Le chiffrement signifie que toutes les données transmises sont brouillées, de sorte que même si quelque chose se passait mal, elles seraient inintelligibles pour tout destinataire non autorisé.<br /><br />
+        Nous utilisons un processeur de cartes de crédit tiers qui répond aux normes internationales les plus strictes en matière de sécurité des données pour gérer vos paiements par carte de crédit, de sorte que personne n'a jamais accès à vos informations de carte. Nous NE conservons PAS votre numéro de carte de crédit.<br /><br />
+        Chez NERVE CALM Labs, nous comprenons que vous nous confiez votre sécurité financière lorsque vous achetez chez nous en ligne. Nous avons tout mis en œuvre pour garantir la sécurité de vos informations du début à la fin, et nous vous remercions de la confiance que vous nous accordez.
+      </div>
+    </div>
+
+    <!-- FAQ Item 5 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">En quoi NERVE CALM est-il différent de tout ce que j'ai essayé ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        NERVE CALM se distingue par sa formulation unique qui combine le glycinate de magnésium avec d'autres ingrédients puissants, notamment l'acide alpha-lipoïque, le trévo, la L-Carnitine et le curcuma. Ces ingrédients agissent ensemble pour soulager l'inconfort du nerf sciatique, réduire l'inflammation et favoriser la santé des nerfs sur le long terme. De plus, NERVE CALM offre des avantages tels que la réduction de l'inconfort, le soutien à la relaxation musculaire et l'amélioration de la fonction nerveuse globale pour une vie plus saine.
+      </div>
+    </div>
+
+    <!-- FAQ Item 6 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Comment NERVE CALM se compare-t-il aux autres compléments similaires ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        NERVE CALM se distingue des autres compléments similaires par son approche globale et son solide soutien scientifique. Alors que de nombreux compléments se concentrent uniquement sur un soulagement temporaire de l'inconfort, NERVE CALM vise à traiter les causes sous-jacentes de l'inconfort du nerf sciatique, à lutter contre l'inflammation, à favoriser la régénération nerveuse et à améliorer la santé globale des nerfs. L'efficacité des ingrédients de NERVE CALM est étayée par des études cliniques et des avis d'utilisateurs rapportant des améliorations significatives en peu de temps.
+      </div>
+    </div>
+
+    <!-- FAQ Item 7 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Cela fonctionnera-t-il pour moi ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Chaque personne est différente, mais NERVE CALM® est remarquablement efficace pour presque tous ceux qui l'ont essayé. Il contient des ingrédients validés cliniquement avec de nombreuses preuves. Mais si, pour une raison quelconque, vous n'êtes pas satisfait(e) de NERVE CALM, rappelez-vous que vous pouvez toujours le retourner et récupérer 100% de votre investissement.
+      </div>
+    </div>
+
+    <!-- FAQ Item 8 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Comment le prendre ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Prendre NERVE CALM n'a jamais été aussi simple. Il vous suffit de prendre 2 capsules, le matin ou le soir. Chaque capsule est petite, facile à avaler et agit immédiatement.
+      </div>
+    </div>
+
+    <!-- FAQ Item 9 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Combien de temps faut-il pour voir les effets ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Vous commencerez à ressentir rapidement des bienfaits sur l'humeur, le sommeil et l'énergie.<br /><br />
+        En ce qui concerne la nutrition et le soutien d'une fonction nerveuse adéquate, cela ne se fera pas du jour au lendemain : notre formule utilise la forme la plus biodisponible de chaque ingrédient afin que ceux-ci soient absorbés plus rapidement que dans d'autres compléments.<br /><br />
+        Certains clients ont constaté des résultats en aussi peu qu'une semaine, tandis que pour la plupart, il faudra 3 à 6 mois pour obtenir les meilleurs résultats.<br /><br />
+        Chaque cas est différent – et plusieurs facteurs peuvent influencer le temps nécessaire pour voir une amélioration. Nous recommandons fortement de prendre NERVE CALM® pendant au moins 4 à 6 mois pour maximiser vos chances de succès.<br /><br />
+        Nous comprenons également que, malgré le taux de réussite élevé de notre formule, elle ne fonctionnera pas pour tout le monde. C'est pourquoi nous offrons une garantie de 60 jours sur votre dernière commande. Si NERVE CALM® ne vous convient pas, nous vous offrons une année entière pour demander un remboursement (hors frais de port) sur votre dernière commande.
+      </div>
+    </div>
+
+    <!-- FAQ Item 10 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Y a-t-il des effets secondaires ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Tous les ingrédients de NERVE CALM® sont sûrs et n'ont pas montré d'effets secondaires significatifs. Cependant, chaque personne étant différente, assurez-vous de toujours consulter votre médecin pour savoir si NERVE CALM® vous convient.
+      </div>
+    </div>
+
+    <!-- FAQ Item 11 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Puis-je prendre NERVE CALM avec mes médicaments actuels ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Les ingrédients de NERVE CALM® sont généralement sans danger lorsqu'ils sont pris avec des médicaments sur ordonnance, mais nous vous recommandons de consulter d'abord votre médecin ou votre pharmacien. Comme certains médicaments peuvent temporairement inhiber la capacité du corps à absorber les nutriments, nous vous conseillons de prendre NERVE CALM® soit 30 minutes avant, soit après avoir pris vos médicaments. Cela permettra une meilleure absorption des ingrédients de NERVE CALM® par votre organisme.
+      </div>
+    </div>
+
+    <!-- FAQ Item 12 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Quelle est la durée de conservation ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Chaque flacon porte la mention « Date de fabrication » (DF), nous vous recommandons d'utiliser le produit dans les 24 mois suivant cette date.
+      </div>
+    </div>
+
+    <!-- FAQ Item 13 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Serai-je abonné(e) à un service ou envoi automatique ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Non, nous n'offrons qu'un achat unique afin d'éviter toute confusion. Si le produit vous plaît, nous sommes convaincus que vous reviendrez par vous-même.
+      </div>
+    </div>
+
+    <!-- FAQ Item 14 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Où est fabriqué le produit ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Nous fabriquons fièrement chaque composant dans notre établissement situé au 19655 E 35th Drive Suite 100, Aurora, CO 80011. Nous n'externalisons aucun de nos postes de service client à l'étranger et soutenons fièrement l'économie locale.
+      </div>
+    </div>
+
+    <!-- FAQ Item 15 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Quels sont tous les ingrédients de notre formule de soulagement de l'inconfort du nerf sciatique ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        <strong>Présentation des ingrédients inactifs</strong><br />
+        Hypromellose (Capsule végétale) : Ce matériau de capsule d'origine végétale assure une dissolution rapide pour une libération et une absorption rapide des ingrédients actifs, répondant ainsi aux besoins des végétariens et des consommateurs soucieux de leur santé.<br /><br />
+        Cellulose microcristalline : Sert d'excellent agent de charge et de texturisant, aidant à stabiliser la formulation et à assurer l'uniformité de chaque capsule pour une efficacité constante.<br /><br />
+        Stéarate de magnésium : Utilisé comme agent d'écoulement, il améliore le processus de fabrication en empêchant les ingrédients de coller aux équipements de production, maintenant ainsi la qualité et la sécurité des capsules.<br /><br />
+        Acide stéarique : Cet acide gras sert à la fois d'émulsifiant et de lubrifiant, améliorant le mélange des ingrédients et contribuant à la consistance homogène des capsules.<br /><br />
+        Dioxyde de silicium : Souvent utilisé comme agent anti-agglomérant, il empêche les ingrédients de s'agglomérer, garantissant que chaque dose contient la juste quantité d'ingrédients actifs.<br /><br />
+        Remarque : Ces ingrédients sont essentiels pour assurer la stabilité et la qualité globales de notre formule de soulagement de l'inconfort du nerf sciatique. Ils n'affectent pas directement le traitement, mais soutiennent la délivrance efficace et la fiabilité des composants actifs.
+      </div>
+    </div>
+
+    <!-- FAQ Item 16 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Comment fonctionne la garantie ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Une fois que vous passez votre commande de NERVE CALM®, vous disposez de 60 jours complets pour l'essayer. Si, pour une raison quelconque, vous n'êtes pas 100% satisfait(e) pendant cette période, envoyez simplement un e-mail à sup@vmcorporation.online et vous récupérerez intégralement votre investissement — sans tracas et sans questions. Vous trouverez cet e-mail mentionné sur notre site, dans votre e-mail de confirmation et dans chaque livraison de NERVE CALM® que vous recevez.
+      </div>
+    </div>
+
+    <!-- FAQ Item 17 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Et si j'ai d'autres questions ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Si vous avez des questions pendant votre expérience, n'hésitez pas à contacter notre équipe de support basée aux États-Unis à l'adresse e-mail sup@vmcorporation.online ou par téléphone au (833)391-1641. Vous trouverez toujours nos coordonnées sur notre site.
+      </div>
+    </div>
+
+    <!-- FAQ Item 18 -->
+    <div class="faq-item">
+      <div class="question">
+        <span class="q-text">Comment commencer ?</span>
+        <span class="toggle-icon">+</span>
+      </div>
+      <div class="answer">
+        Il vous suffit de cliquer sur le bouton "COMMANDER MAINTENANT" pour passer votre commande. N'oubliez pas que, puisque vous êtes sur cette page, vous bénéficiez de notre remise "Investissez plus, économisez plus", ce qui signifie que plus vous achetez, plus vous économisez. Une fois votre commande passée, vous devriez la recevoir sous 5 à 7 jours, selon votre lieu de résidence.
+      </div>
+    </div>
+
+    <button class="order-button">COMMANDER MAINTENANT</button>
+    <div class="guarantee-text">Garantie de remboursement de 60 jours</div>
+  </section>
+
+  <!-- SECTION 5 -->
+  <section id="sessao5">
+    <div class="free-shipping">CHAQUE COMMANDE DE 6 BOUTEILLES BÉNÉFICIE D'UNE LIVRAISON GRATUITE !</div>
+    <div class="recommended">*96% des clients commandent 6 bouteilles (notre option recommandée)</div>
+  </section>
+
+  <!-- SECTION 6 -->
+  <section id="sessao6">
+    <div class="main-text">NE MANQUEZ PAS CETTE OPPORTUNITÉ EXCLUSIVE DE VOUS APPROVISIONNER EN NERVE CALM</div>
+    <div class="sub-text">TANT QUE LES STOCKS SONT DISPONIBLES !</div>
+  </section>
+
+	<!-- SECTION 7 -->
+	<section id="sessao7">
+	  <div class="bonus-title">Commandez 6 bouteilles ou 3 bouteilles et recevez 2 bonus gratuits !</div>
+	  <div class="bonus-container">
+		<!-- Bonus 1 -->
+		<div class="bonus-item">
+		  <img src="images/bonus1.png" alt="Bonus 1" />
+		  <div class="bonus-head">Bonus n°1 : LE JEUNE ÉTERNEL</div>
+		  <div class="bonus-price">À PARTIR DE : <span class="strike">49,95</span> POUR : GRATUIT</div>
+		  <div class="bonus-desc">
+			Le livre "Le Jeune Éternel" dévoile des secrets naturels pour ralentir le vieillissement. Découvrez un rituel matinal simple pour une peau rajeunie, une boisson maison capable de retarder le vieillissement de 20 ans, et identifiez le "poison invisible" présent dans la plupart des foyers qui accélère votre vieillissement. Apprenez également comment garder votre esprit vif jusqu'à 90 ans et adoptez une habitude nocturne qui stimule la production de collagène pendant votre sommeil.
+		  </div>
+		</div>
+		<!-- Bonus 2 -->
+		<div class="bonus-item">
+		  <img src="images/bonus2.png" alt="Bonus 2" />
+		  <div class="bonus-head">Bonus n°2 : SANTÉ À TOUTE ÉPREUVE POUR LES AÎNÉS</div>
+		  <div class="bonus-price">À PARTIR DE : <span class="strike">49,95</span> POUR : GRATUIT</div>
+		  <div class="bonus-desc">
+			Santé à toute épreuve pour les aînés est un guide numérique rempli de recettes de jus 100 % naturels pour renforcer votre immunité et protéger votre corps. Découvrez la "Super Boisson" qui abaisse naturellement le taux de sucre dans le sang, un jus matinal qui aide à maintenir une tension artérielle équilibrée, et un "Smoothie pour le Cœur" qui nettoie les artères. Apprenez une "Recette anti-obésité" qui fait fondre la graisse viscérale, un thé nocturne qui régule le cholestérol, et un "Jus de Sommeil" qui combat l'insomnie pour une nuit réparatrice.
+		  </div>
+		</div>
+	  </div>
+	</section>
+
+  <!-- SECTION 8 -->
+  <section id="sessao8">
+    <div class="flex-row image-sequence">
+      <img src="images/1.png" alt="Image 1" />
+      <img src="images/3.png" alt="Image 3" />
+      <img src="images/6.png" alt="Image 6" />
+    </div>
+    <div class="flex-row">
+      <img src="images/selos.png" alt="Sceaux" />
+    </div>
+  </section>
+
+  <!-- SECTION 9 -->
+  <section id="sessao9">
+    <img src="images/rotulo.jpg" alt="Étiquette" />
+  </section>
+
+  <!-- SECTION 10 -->
+  <section id="sessao10">
+    <div class="terms-menu">
+      <a href="#">Conditions générales</a> |
+      <a href="#">Politique de confidentialité</a> |
+      <a href="#">Contact</a> |
+      <a href="#">Avertissement</a> |
+      <a href="#">Référence</a> |
+      <a href="#">Remboursement</a> |
+      <a href="#">Expédition</a>
+    </div>
+  </section>
+
+  <!-- SECTION 11 -->
+  <section id="sessao11">
+    <p>
+      Ces déclarations n'ont pas été évaluées par la Food and Drugs Administration. Ce produit n'est pas destiné à diagnostiquer, traiter, guérir ou prévenir une quelconque maladie. Les informations fournies sur ce site sont uniquement à titre informatif et ne remplacent pas les conseils de votre médecin ou d'un autre professionnel de la santé, ni les informations figurant sur l'étiquette ou l'emballage de tout produit. Vous ne devez pas utiliser les informations de ce site pour diagnostiquer ou traiter un problème de santé, ni pour prescrire un médicament ou tout autre traitement. Vous devriez consulter un professionnel de la santé avant de commencer tout régime, programme d'exercice ou de supplémentation, avant de prendre un médicament, ou si vous avez ou suspectez avoir un problème de santé.
+    </p>
+  </section>
+
+  <!-- SECTION 12 -->
+  <section id="sessao12">
+    <p>Copyright 2025 © Nerve Calm. Tous droits réservés.</p>
+  </section>
+
+  <script>
+    // Compte à rebours pour "XX bouteilles en stock"
+    let bottleCount = 18;
+    const bottleElement = document.getElementById('bottles');
+    const countdownInterval = setInterval(() => {
+      if(bottleCount > 10) {
+        bottleCount--;
+        bottleElement.textContent = bottleCount + " bouteilles en stock";
+      } else {
+        bottleElement.textContent = bottleCount + " bouteilles en stock";
+        bottleElement.style.color = "#FFFFFF";
+        bottleElement.classList.add('pulse');
+        clearInterval(countdownInterval);
+      }
+    }, 15000); // 15 secondes
+
+    // Fonctionnalité de bascule pour FAQ (accordéon avec icônes + et -)
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+      const question = item.querySelector('.question');
+      const answer = item.querySelector('.answer');
+      const toggleIcon = item.querySelector('.toggle-icon');
+
+      question.addEventListener('click', () => {
+        // Ferme toutes les autres FAQ ouvertes
+        faqItems.forEach(i => {
+          if (i !== item) {
+            i.querySelector('.answer').style.display = 'none';
+            i.querySelector('.toggle-icon').textContent = '+';
+          }
+        });
+
+        // Alterne l'affichage de l'élément cliqué
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+          toggleIcon.textContent = '+';
+        } else {
+          answer.style.display = 'block';
+          toggleIcon.textContent = '-';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
