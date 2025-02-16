@@ -22,11 +22,28 @@
       display: block;
       margin: 0 auto;
     }
-    /* Ajustement pour que les grandes images ne dépassent pas la largeur */
-    #sessao3 img, #sessao9 img {
-      max-width: 100%;
+
+    /* Ajuste apenas imagens específicas, sem mexer no restante */
+    .pote-img {
+      max-width: 300px; /* Maior largura quando a tela for grande */
       height: auto;
     }
+    .selos-img {
+      max-width: 600px; /* Ajuste de largura máxima para os selos */
+      width: 100%;
+      height: auto;
+    }
+    .garantia-img {
+      max-width: 600px; /* Ajuste de largura máxima para garantia */
+      width: 100%;
+      height: auto;
+    }
+    @media (max-width: 768px) {
+      .pote-img {
+        max-width: 100%; /* Em telas menores, ocupa a largura total */
+      }
+    }
+    /* Fim dos ajustes pedidos */
 
     /* SECTION 1 */
     #sessao1 {
@@ -63,36 +80,14 @@
       justify-content: center;
       gap: 10px;
       margin-bottom: 20px;
+      align-items: center;
     }
-    .flex-row img {
-      max-width: 100%;
-      height: auto;
-    }
-    /* Séquence d'images responsive */
+    /* Organiza os potes e selos na seção */
     .image-sequence {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-    }
-    .image-sequence img {
-      flex: 1 1 calc(33.33% - 10px);
-      max-width: calc(33.33% - 10px);
-    }
-    @media (max-width: 768px) {
-      .image-sequence img {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
-    }
-    /* Animation de pulsation */
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-    .pulse {
-      animation: pulse 1s infinite;
     }
 
     /* SECTION 3 */
@@ -157,7 +152,6 @@
       font-size: 14px;
       line-height: 1.5;
     }
-    /* Bouton et texte de garantie dans la Section 4 */
     #sessao4 .order-button {
       display: block;
       margin: 20px auto;
@@ -292,6 +286,21 @@
       font-size: 14px;
       color: #000;
     }
+
+    /* Animation de pulsation */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    .pulse {
+      animation: pulse 1s infinite;
+    }
+	.rotulo-img {
+	  max-width: 600px;
+	  width: 100%;
+	  height: auto;
+	}
   </style>
 </head>
 <body>
@@ -309,23 +318,23 @@
       <img src="images/star.svg" alt="Étoile" />
     </div>
     <div class="flex-row image-sequence">
-      <img src="images/1.png" alt="Image 1" />
-      <img src="images/3.png" alt="Image 3" />
-      <img src="images/6.png" alt="Image 6" />
+      <a href="https://vm-business.mycartpanda.com/checkout/173387993:1"><img class="pote-img" src="images/6.png" alt="Image 6" /></a>
+	  <a href="https://vm-business.mycartpanda.com/checkout/173387992:1"><img class="pote-img" src="images/3.png" alt="Image 3" /></a>
+	  <a href="https://vm-business.mycartpanda.com/checkout/173387991:1"><img class="pote-img" src="images/1.png" alt="Image 1" /></a>
     </div>
     <div class="flex-row">
-      <img src="images/selos.png" alt="Sceaux" />
+      <img class="selos-img" src="images/selos.png" alt="Sceaux" />
     </div>
   </section>
 
   <!-- SECTION 3 -->
   <section id="sessao3">
-    <img src="images/garantia.png" alt="Garantie" />
+    <img class="garantia-img" src="images/garantia.png" alt="Garantie" />
     <h2>GARANTIE DE SATISFACTION À 100%</h2>
     <p>
       NERVE CALM est accompagné d'une garantie de remboursement à 100% pendant 60 jours à compter de la date de votre achat initial.
     </p>
-    <button class="order-button">COMMANDER MAINTENANT</button>
+    <button class="order-button" onclick="window.location.href='#sessao2'">COMMANDER MAINTENANT</button>
   </section>
 
   <!-- SECTION 4 -->
@@ -379,7 +388,7 @@
         Notre certificat SSL permet au navigateur et au serveur Web d'établir une connexion sécurisée et chiffrée. Le processus de « poignée de main » SSL, qui établit la session sécurisée, se déroule discrètement en arrière-plan sans interrompre votre expérience d'achat. Une icône de cadenas dans la barre d'état du navigateur et le préfixe « https:// » dans l'URL sont les seules indications visibles d'une session sécurisée en cours.<br /><br />
         La page de paiement NERVE CALM est sécurisée par un certificat SSL de serveur Web Symantec Class 3 EV. Les transactions sur le site sont protégées par un chiffrement SSL jusqu'à 256 bits. Le chiffrement signifie que toutes les données transmises sont brouillées, de sorte que même si quelque chose se passait mal, elles seraient inintelligibles pour tout destinataire non autorisé.<br /><br />
         Nous utilisons un processeur de cartes de crédit tiers qui répond aux normes internationales les plus strictes en matière de sécurité des données pour gérer vos paiements par carte de crédit, de sorte que personne n'a jamais accès à vos informations de carte. Nous NE conservons PAS votre numéro de carte de crédit.<br /><br />
-        Chez NERVE CALM Labs, nous comprenons que vous nous confiez votre sécurité financière lorsque vous achetez chez nous en ligne. Nous avons tout mis en œuvre pour garantir la sécurité de vos informations du début à la fin, et nous vous remercions de la confiance que vous nous accordez.
+        Chez NERVE CALM Labs, nous comprenons que vous nous confiiez votre sécurité financière lorsque vous achetez chez nous en ligne. Nous avons tout mis en œuvre pour garantir la sécurité de vos informations du début à la fin, et nous vous remercions de la confiance que vous nous accordez.
       </div>
     </div>
 
@@ -547,7 +556,7 @@
       </div>
     </div>
 
-    <button class="order-button">COMMANDER MAINTENANT</button>
+    <button class="order-button" onclick="window.location.href='#sessao8'">COMMANDER MAINTENANT</button>
     <div class="guarantee-text">Garantie de remboursement de 60 jours</div>
   </section>
 
@@ -563,46 +572,46 @@
     <div class="sub-text">TANT QUE LES STOCKS SONT DISPONIBLES !</div>
   </section>
 
-	<!-- SECTION 7 -->
-	<section id="sessao7">
-	  <div class="bonus-title">Commandez 6 bouteilles ou 3 bouteilles et recevez 2 bonus gratuits !</div>
-	  <div class="bonus-container">
-		<!-- Bonus 1 -->
-		<div class="bonus-item">
-		  <img src="images/bonus1.png" alt="Bonus 1" />
-		  <div class="bonus-head">Bonus n°1 : LE JEUNE ÉTERNEL</div>
-		  <div class="bonus-price">À PARTIR DE : <span class="strike">49,95</span> POUR : GRATUIT</div>
-		  <div class="bonus-desc">
-			Le livre "Le Jeune Éternel" dévoile des secrets naturels pour ralentir le vieillissement. Découvrez un rituel matinal simple pour une peau rajeunie, une boisson maison capable de retarder le vieillissement de 20 ans, et identifiez le "poison invisible" présent dans la plupart des foyers qui accélère votre vieillissement. Apprenez également comment garder votre esprit vif jusqu'à 90 ans et adoptez une habitude nocturne qui stimule la production de collagène pendant votre sommeil.
-		  </div>
-		</div>
-		<!-- Bonus 2 -->
-		<div class="bonus-item">
-		  <img src="images/bonus2.png" alt="Bonus 2" />
-		  <div class="bonus-head">Bonus n°2 : SANTÉ À TOUTE ÉPREUVE POUR LES AÎNÉS</div>
-		  <div class="bonus-price">À PARTIR DE : <span class="strike">49,95</span> POUR : GRATUIT</div>
-		  <div class="bonus-desc">
-			Santé à toute épreuve pour les aînés est un guide numérique rempli de recettes de jus 100 % naturels pour renforcer votre immunité et protéger votre corps. Découvrez la "Super Boisson" qui abaisse naturellement le taux de sucre dans le sang, un jus matinal qui aide à maintenir une tension artérielle équilibrée, et un "Smoothie pour le Cœur" qui nettoie les artères. Apprenez une "Recette anti-obésité" qui fait fondre la graisse viscérale, un thé nocturne qui régule le cholestérol, et un "Jus de Sommeil" qui combat l'insomnie pour une nuit réparatrice.
-		  </div>
-		</div>
-	  </div>
-	</section>
+  <!-- SECTION 7 -->
+  <section id="sessao7">
+    <div class="bonus-title">Commandez 6 bouteilles ou 3 bouteilles et recevez 2 bonus gratuits !</div>
+    <div class="bonus-container">
+      <!-- Bonus 1 -->
+      <div class="bonus-item">
+        <img src="images/bonus1.png" alt="Bonus 1" />
+        <div class="bonus-head">Bonus n°1 : LE JEUNE ÉTERNEL</div>
+        <div class="bonus-price">À PARTIR DE : <span class="strike">49,95</span> POUR : GRATUIT</div>
+        <div class="bonus-desc">
+          Le livre "Le Jeune Éternel" dévoile des secrets naturels pour ralentir le vieillissement. Découvrez un rituel matinal simple pour une peau rajeunie, une boisson maison capable de retarder le vieillissement de 20 ans, et identifiez le "poison invisible" présent dans la plupart des foyers qui accélère votre vieillissement. Apprenez également comment garder votre esprit vif jusqu'à 90 ans et adoptez une habitude nocturne qui stimule la production de collagène pendant votre sommeil.
+        </div>
+      </div>
+      <!-- Bonus 2 -->
+      <div class="bonus-item">
+        <img src="images/bonus2.png" alt="Bonus 2" />
+        <div class="bonus-head">Bonus n°2 : SANTÉ À TOUTE ÉPREUVE POUR LES AÎNÉS</div>
+        <div class="bonus-price">À PARTIR DE : <span class="strike">49,95</span> POUR : GRATUIT</div>
+        <div class="bonus-desc">
+          Santé à toute épreuve pour les aînés est un guide numérique rempli de recettes de jus 100 % naturels pour renforcer votre immunité et protéger votre corps. Découvrez la "Super Boisson" qui abaisse naturellement le taux de sucre dans le sang, un jus matinal qui aide à maintenir une tension artérielle équilibrée, et un "Smoothie pour le Cœur" qui nettoie les artères. Apprenez une "Recette anti-obésité" qui fait fondre la graisse viscérale, un thé nocturne qui régule le cholestérol, et un "Jus de Sommeil" qui combat l'insomnie pour une nuit réparatrice.
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- SECTION 8 -->
   <section id="sessao8">
     <div class="flex-row image-sequence">
-      <img src="images/1.png" alt="Image 1" />
-      <img src="images/3.png" alt="Image 3" />
-      <img src="images/6.png" alt="Image 6" />
+      <a href="https://vm-business.mycartpanda.com/checkout/173387993:1"><img class="pote-img" src="images/6.png" alt="Image 6" /></a>
+	  <a href="https://vm-business.mycartpanda.com/checkout/173387992:1"><img class="pote-img" src="images/3.png" alt="Image 3" /></a>
+	  <a href="https://vm-business.mycartpanda.com/checkout/173387991:1"><img class="pote-img" src="images/1.png" alt="Image 1" /></a>
     </div>
     <div class="flex-row">
-      <img src="images/selos.png" alt="Sceaux" />
+      <img class="selos-img" src="images/selos.png" alt="Sceaux" />
     </div>
   </section>
 
   <!-- SECTION 9 -->
   <section id="sessao9">
-    <img src="images/rotulo.jpg" alt="Étiquette" />
+    <img class="rotulo-img" src="images/rotulo.jpg" alt="Étiquette" />
   </section>
 
   <!-- SECTION 10 -->
