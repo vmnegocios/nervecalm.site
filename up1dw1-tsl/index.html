@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NERVE CALM - UP1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #FFFFFF;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .content-container {
+      background-color: #f0f0f0;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 90%;
+      text-align: left;
+    }
+    .btn-decline {
+      background-color: #f0f0f0;
+      color: #000;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      border: none;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+    .btn-decline:hover {
+      opacity: 0.9;
+    }
+    .down-arrow {
+      font-size: 24px;
+      margin: 10px 0;
+      display: block;
+    }
+    .flex-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5%;
+      box-sizing: border-box;
+    }
+    .flex-item-left {
+      width: 30%;
+      text-align: center;
+    }
+    .flex-item-right {
+      width: 60%;
+    }
+    .feature-row {
+      display: flex;
+      align-items: center;
+    }
+    .feature-row .icon {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+    .bg-blue {
+      background-color: #3366FF;
+      color: #FFF;
+      padding: 5px;
+    }
+    .bg-light {
+      background-color: #f0f0f0;
+      margin: 20px 0;
+    }
+    .bg-custom {
+      background-color: #C6DAF1;
+      padding: 40px 20px;
+    }
+    .bg-dark {
+      background-color: #000000;
+      padding: 10px;
+    }
+    .footer-menu {
+      background-color: #3366FF;
+      padding: 10px 0;
+    }
+    .footer-menu span {
+      color: #FFFFFF;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .text-small {
+      font-size: 10px;
+    }
+    .underline-bold {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    
+    /* Estilos para dispor as imagens lado a lado em telas grandes */
+    #section-clickable-image .images-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px; /* Espaço entre as imagens */
+    }
+    
+    /* Para telas pequenas: empilha verticalmente */
+    @media (max-width: 768px) {
+      #section-clickable-image .images-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Section 1 : Image de Progression -->
+  <section id="section-progress">
+    <img src="images/progress.png" alt="Progression" style="width: calc(100% - 10px); margin: 5px;">
+  </section>
+
+  <!-- Section 2 : Message de Traitement de la Commande -->
+  <section id="section-processing" class="bg-blue">
+    <h1 style="font-weight: bold;">ATTENTION ! Vous pourriez le regretter si vous quittez cette page...</h1>
+    <h3>Nous prenons très au sérieux le manque de matières premières !</h3>
+  </section>
+
+  <!-- Section 3 : Message de Félicitations -->
+  <section id="section-congratulations">
+    <div class="content-container">
+      <p style="color: #000;">
+        La guerre entre la Russie et l'Ukraine a engendré une <strong>pénurie mondiale du principal ingrédient utilisé dans NERVE CALM.</strong>
+      </p>
+      <p style="color: #000;">
+        Le laboratoire qui produit NERVE CALM <strong>a déjà trouvé un autre fournisseur</strong> offrant la même qualité, voire supérieure à l'ancien.
+      </p>
+      <p style="color: #000;">
+        Cependant, outre le temps consacré au processus de négociation, il y a également la localisation de ce nouveau fournisseur, qui se trouve en Chine.
+      </p>
+      <p style="color: #000;">
+        Où les ports des cargos sont quotidiennement saturés !
+      </p>
+      <p style="color: #000;">
+        En additionnant le délai de finalisation de la négociation et le temps nécessaire pour le transport du conteneur contenant l'ingrédient principal, le résultat est d'environ 10 mois.
+      </p>
+      <p style="color: #000;">
+        Ensuite, grâce à la haute qualité de production de l'usine, il faudrait environ 1 mois supplémentaire pour finaliser les nouveaux lots de NERVE CALM.
+      </p>
+      <p style="color: #000;">
+        <strong>Ce qui totalise ainsi 11 mois avant que nos clients puissent acheter à nouveau.</strong>
+      </p>
+      <p style="color: #000;">
+        Cela, si tout se passe comme prévu (ce qui est rarement le cas)...
+      </p>
+      <p style="color: #000;">
+        Je comprends qu'auparavant, vous avez peut-être trouvé l'opportunité d'obtenir 12 pots supplémentaires très attrayante...
+      </p>
+      <p style="color: #000;">
+        Cependant, je vous assure qu'en additionnant les pots que vous avez déjà acquis avec les 12 pots de cette nouvelle opportunité, <strong>votre chance d'inverser la neuropathie augmente considérablement.</strong>
+      </p>
+      <p style="color: #000;">
+        Maintenant, dès que vous commencerez à prendre, <strong>si vous manquez même d'un seul jour, la neuropathie pourrait revenir jusqu'à 3 fois plus forte !</strong>
+      </p>
+      <p style="color: #000;">
+        Alors, si j'étais vous, je ne laisserais pas passer cette opportunité...
+      </p>
+      <p style="color: #000;">
+        Et ce n'est pas tout !
+      </p>
+      <p style="color: #000;">
+        Avec la chance que vous avez eue aujourd'hui à la roulette, vous paierez <strong>moins de 2 €</strong> par jour pour mettre fin à tous les désagréments causés par cette maladie.
+      </p>
+      <p style="color: #000;">
+        Alors, ne perdez plus de temps...
+      </p>
+      <h2 style="color: #000; text-align: center;">
+        Sélectionnez la MEILLEURE option ci-dessous !
+      </h2>
+      <p style="color: #000; text-align: center;">
+        En faisant cela, une fenêtre de confirmation apparaîtra. Si vous souhaitez maximiser vos chances de mettre définitivement fin à votre neuropathie, cliquez sur confirmer...
+      </p>
+    </div>
+  </section>
+
+  <!-- Section 4 : Image Promotionnelle Cliquable -->
+  <section id="section-clickable-image">
+    <div class="images-container">
+      <a href="https://vm-business.mycartpanda.com/ex-ocu/next-offer/49jgXaa2zA-4jyqmN3Nxj?accepted=yes">
+        <img src="images/up1-12.png" alt="Image promotionnelle cliquable">
+      </a>
+      <a href="https://vm-business.mycartpanda.com/ex-ocu/next-offer/49jgXaa2zA-bVPezANAyY?accepted=yes">
+        <img src="images/up1dw1-9.png" alt="Image promotionnelle cliquable 2">
+      </a>
+    </div>
+  </section>
+
+  <!-- Section 6 : Garantie et Sécurité -->
+  <section id="section-guarantee" class="bg-custom">
+    <div class="flex-layout" style="padding: 0">
+      <div class="flex-item-left">
+        <img src="images/GARANTIA.png" alt="Garantie" style="width: 120px;">
+      </div>
+      <div class="flex-item-right">
+        <div class="content-container" style="margin: 0; padding: 10px;">
+          <div class="feature-row">
+            <div class="icon">
+              <i class="fas fa-credit-card" style="font-size: 32px; color: #000;"></i>
+            </div>
+            <div style="text-align: left; color: #000;">Paiement sécurisé</div>
+          </div>
+          <div class="feature-row">
+            <div class="icon">
+              <i class="fas fa-truck" style="font-size: 32px; color: #000;"></i>
+            </div>
+            <div style="text-align: left; color: #000;">Livraison gratuite</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7 : Option de Refus de l'Offre -->
+  <section id="section-decline" style="margin: 20px 5px;">
+    <a href="https://vm-business.mycartpanda.com/ex-ocu/next-offer/49jgXaa2zA-bVPezANAyY?accepted=no" class="btn-decline">NON, MERCI!</a>
+    <span class="down-arrow">↓</span>
+    <a href="https://vm-business.mycartpanda.com/ex-ocu/next-offer/49jgXaa2zA-bVPezANAyY?accepted=no" style="color: #000; text-decoration: none;">
+      Je comprends que c'est la seule chance que j'aurai de profiter de cette offre spéciale. Je reconnais que passer une nouvelle commande plus tard coûtera jusqu'à 99 € par bouteille plus les frais de livraison. <span class="underline-bold">Je ne veux certainement pas en profiter.</span>
+    </a>
+  </section>
+
+  <!-- Section 9 : Menu de Pied de Page -->
+  <section id="section-footer-menu" class="footer-menu">
+    <span>Contact</span>
+    <span>Références</span>
+    <span>Conditions d'utilisation</span>
+    <span>Avertissement</span>
+    <span>Politique de confidentialité</span>
+    <span>Politique de livraison</span>
+    <span>Politique de remboursement</span>
+  </section>
+
+  <!-- Section 10 : Avertissement -->
+  <section id="section-disclaimer" class="bg-dark">
+    <p class="text-small" style="color: #FFFFFF;">
+      Avertissement : Les résultats individuels peuvent varier. Ces déclarations n'ont pas été évaluées par la Food and Drug Administration. Ce produit n'est pas destiné à diagnostiquer, traiter, guérir ou prévenir toute maladie. Avant de prendre tout médicament, médicament en vente libre, complément ou herbe, consultez un médecin pour une évaluation approfondie. Les témoignages ne sont pas censés représenter des résultats typiques. Tous les témoignages proviennent de vrais participants et peuvent ne pas refléter l'expérience typique de l'acheteur, et ne sont pas destinés à représenter ou garantir que quiconque obtiendra des résultats similaires.
+    </p>
+  </section>
+</body>
+</html>
